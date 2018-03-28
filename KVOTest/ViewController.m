@@ -11,6 +11,7 @@
 @interface ViewController ()<myKVODelegate>
 
 @property (strong, nonatomic) myKVO            *myKVO;
+@property (strong, nonatomic) UISlider         *slider;
 @property (weak, nonatomic) IBOutlet UILabel *numLB;
 - (IBAction)changeBtn:(UIButton *)sender;
 
@@ -26,33 +27,88 @@
     self.myKVO = [[myKVO alloc]init];
     self.myKVO.delegate = self;
     [self.myKVO addObserver:self forKeyPath:@"num" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil ];
+    
+    [self sliderKVO];
+    
 }
+
+//利用kvo可以实现不仅在手动拖动slider时可以响应方法，在其他地方改变slider的值也可以响应方法
+- (void)sliderKVO{
+    
+    self.slider = [[UISlider alloc] init];
+    [self.view addSubview:self.slider];
+    self.slider.minimumTrackTintColor = [UIColor redColor];
+    self.slider.maximumTrackTintColor = [UIColor greenColor];
+    self.slider.backgroundColor = [UIColor purpleColor];
+    
+    
+    self.slider.frame = CGRectMake(30,280,200,2);
+    
+    //利用kvo可以实现不仅可以监听手动拖动slider时value变化，在其他地方改变slider的value也可以监听
+    [self.slider addObserver:self forKeyPath:@"value" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:nil];
+    
+    //这个方法只能监听手动拖动slider时，value值得变化
+    [self.slider addTarget:self action:@selector(sliderValueChange:) forControlEvents:UIControlEventValueChanged];
+    self.slider.maximumValue = 100;
+    self.slider.minimumValue = 0;
+    self.slider.value = 20;
+    
+}
+
+//kvo  监听回调方法
+- (void)sliderFunc:(UISlider *)slider {
+    NSLog(@"利用kvo监听slider.value值改变，slider.value==%f",slider.value);
+}
+
+//target 监听回调
+- (void)sliderValueChange:(UISlider *)slider{
+    NSLog(@"拖动滚动调皮导致slider.value变化：slider.value==%f",slider.value);
+}
+
 //不实现此方法error log：
 //Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '<ViewController: 0x7f83f5704ac0>: An -observeValueForKeyPath:ofObject:change:context: message was received but not handled.
 //Key path: num
 
-//-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-//    if (([keyPath isEqualToString:@"num"]) && (object == self.myKVO)) {
-//        self.numLB.text = [NSString stringWithFormat:@"改变后的值==%@",[change valueForKey:@"new"]];
-//    }
-//    NSLog(@"keyPath == %@,object == %@,change==%@, 变化前数据==%@,变化后数据==%@, context==%@",keyPath,object,change,[change valueForKey:@"old"],[change valueForKey:@"new"],context);
-//    
-//}
-
-- (IBAction)changeBtn:(UIButton *)sender {
-    self.myKVO.num = self.myKVO.num + 1;
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if (([keyPath isEqualToString:@"num"]) && (object == self.myKVO)) {//myKVO
+        self.numLB.text = [NSString stringWithFormat:@"num=%@",[change valueForKey:@"new"]];
+    }
+    
+    if (([keyPath isEqualToString:@"value"]) && (object == self.slider)) {//slider
+        self.numLB.text = [NSString stringWithFormat:@"slider.value=%@",[change valueForKey:@"new"]];
+        SEL method = NSSelectorFromString(@"sliderFunc:");
+        IMP imp = [self methodForSelector:method];
+        //含有参数的方法分发
+        void (*func)(id, SEL, id) = (void *)imp;
+        func(self, method, object);
+        
+        
+        //没有参数的方法分发
+        //    void (*func)(id, SEL) = (void *)imp;
+        //    func(self, method);
+    }
+    NSLog(@"keyPath == %@,object == %@,change==%@, 变化前数据==%@,变化后数据==%@, context==%@",keyPath,object,change,[change valueForKey:@"old"],[change valueForKey:@"new"],context);
     
 }
 
+- (IBAction)changeBtn:(UIButton *)sender {
+    self.myKVO.num = self.myKVO.num + 1;
+    self.slider.value = self.slider.value+20;
+    
+}
+
+//代理方法
 - (void)printNum:(int)num{
     NSLog(@"delegate通知数据的变化num==%d",num);
 }
 
+//通知方法
 - (void)notiMode:(NSNotification *)noti{
     NSString *name = [noti.object valueForKey:@"name"];
     NSLog(@"全局变量name的值==%@",name);
 }
 
+//移除kvo
 - (void)dealloc{
     [self removeObserver:self forKeyPath:@"num"];
 }
