@@ -23,11 +23,12 @@
 }
 
 - (void)setNum:(int)num{
-//    [self doNoti];
+    _num = num;
     if ([self.delegate respondsToSelector:@selector(printNum:)]) {
-        [self.delegate printNum:num];
+        [self.delegate printNum:_num];
     }
 }
+
 
 - (void)doNoti{
     _name = @"通知模式";

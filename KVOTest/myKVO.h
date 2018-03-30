@@ -16,6 +16,7 @@
 
 @interface myKVO : NSObject
 
+//SINGLETON_FOR_HEADER(myKVO);
 @property (nonatomic, assign) int num;
 @property (nonatomic, weak)id <myKVODelegate>delegate;
 

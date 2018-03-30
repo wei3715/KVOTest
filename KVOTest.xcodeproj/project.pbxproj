@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04176130206C88BE00E6A61B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417612F206C88BE00E6A61B /* MainViewController.m */; };
+		04176135206C8C8E00E6A61B /* SimpleKVOTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04176133206C8C8E00E6A61B /* SimpleKVOTestViewController.m */; };
+		04176136206C8C8E00E6A61B /* SimpleKVOTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04176134206C8C8E00E6A61B /* SimpleKVOTestViewController.xib */; };
+		04176139206CD01800E6A61B /* DiffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04176138206CD01800E6A61B /* DiffViewController.m */; };
 		04AA293A206B62C800694636 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA2939206B62C800694636 /* AppDelegate.m */; };
-		04AA293D206B62C800694636 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA293C206B62C800694636 /* ViewController.m */; };
-		04AA2940206B62C800694636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AA293E206B62C800694636 /* Main.storyboard */; };
 		04AA2942206B62C800694636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AA2941206B62C800694636 /* Assets.xcassets */; };
 		04AA2945206B62C800694636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AA2943206B62C800694636 /* LaunchScreen.storyboard */; };
 		04AA2948206B62C800694636 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA2947206B62C800694636 /* main.m */; };
 		04AA2952206B62C900694636 /* KVOTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA2951206B62C900694636 /* KVOTestTests.m */; };
 		04AA295D206B62C900694636 /* KVOTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA295C206B62C900694636 /* KVOTestUITests.m */; };
 		04AA296C206B62DB00694636 /* myKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA296B206B62DB00694636 /* myKVO.m */; };
+		04E80CF6206DD5AA00C1E60E /* ControlKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E80CF4206DD5AA00C1E60E /* ControlKVOViewController.m */; };
+		04E80CF7206DD5AA00C1E60E /* ControlKVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E80CF5206DD5AA00C1E60E /* ControlKVOViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0417612E206C88BE00E6A61B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0417612F206C88BE00E6A61B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		04176131206C8A2400E6A61B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04176132206C8C8E00E6A61B /* SimpleKVOTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleKVOTestViewController.h; sourceTree = "<group>"; };
+		04176133206C8C8E00E6A61B /* SimpleKVOTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleKVOTestViewController.m; sourceTree = "<group>"; };
+		04176134206C8C8E00E6A61B /* SimpleKVOTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleKVOTestViewController.xib; sourceTree = "<group>"; };
+		04176137206CD01800E6A61B /* DiffViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiffViewController.h; sourceTree = "<group>"; };
+		04176138206CD01800E6A61B /* DiffViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiffViewController.m; sourceTree = "<group>"; };
 		04AA2935206B62C800694636 /* KVOTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVOTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AA2938206B62C800694636 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04AA2939206B62C800694636 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04AA293B206B62C800694636 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04AA293C206B62C800694636 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04AA293F206B62C800694636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04AA2941206B62C800694636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04AA2944206B62C800694636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04AA2946206B62C800694636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +63,9 @@
 		04AA295E206B62C900694636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04AA296A206B62DB00694636 /* myKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myKVO.h; sourceTree = "<group>"; };
 		04AA296B206B62DB00694636 /* myKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myKVO.m; sourceTree = "<group>"; };
+		04E80CF3206DD5AA00C1E60E /* ControlKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlKVOViewController.h; sourceTree = "<group>"; };
+		04E80CF4206DD5AA00C1E60E /* ControlKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControlKVOViewController.m; sourceTree = "<group>"; };
+		04E80CF5206DD5AA00C1E60E /* ControlKVOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlKVOViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,15 +118,23 @@
 			children = (
 				04AA2938206B62C800694636 /* AppDelegate.h */,
 				04AA2939206B62C800694636 /* AppDelegate.m */,
-				04AA293B206B62C800694636 /* ViewController.h */,
-				04AA293C206B62C800694636 /* ViewController.m */,
-				04AA293E206B62C800694636 /* Main.storyboard */,
 				04AA2941206B62C800694636 /* Assets.xcassets */,
 				04AA2943206B62C800694636 /* LaunchScreen.storyboard */,
 				04AA2946206B62C800694636 /* Info.plist */,
 				04AA2947206B62C800694636 /* main.m */,
 				04AA296A206B62DB00694636 /* myKVO.h */,
 				04AA296B206B62DB00694636 /* myKVO.m */,
+				04176132206C8C8E00E6A61B /* SimpleKVOTestViewController.h */,
+				04176133206C8C8E00E6A61B /* SimpleKVOTestViewController.m */,
+				04176134206C8C8E00E6A61B /* SimpleKVOTestViewController.xib */,
+				04176137206CD01800E6A61B /* DiffViewController.h */,
+				04176138206CD01800E6A61B /* DiffViewController.m */,
+				0417612E206C88BE00E6A61B /* MainViewController.h */,
+				0417612F206C88BE00E6A61B /* MainViewController.m */,
+				04E80CF3206DD5AA00C1E60E /* ControlKVOViewController.h */,
+				04E80CF4206DD5AA00C1E60E /* ControlKVOViewController.m */,
+				04E80CF5206DD5AA00C1E60E /* ControlKVOViewController.xib */,
+				04176131206C8A2400E6A61B /* PrefixHeader.pch */,
 			);
 			path = KVOTest;
 			sourceTree = "<group>";
@@ -244,8 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AA2945206B62C800694636 /* LaunchScreen.storyboard in Resources */,
+				04E80CF7206DD5AA00C1E60E /* ControlKVOViewController.xib in Resources */,
 				04AA2942206B62C800694636 /* Assets.xcassets in Resources */,
-				04AA2940206B62C800694636 /* Main.storyboard in Resources */,
+				04176136206C8C8E00E6A61B /* SimpleKVOTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04176139206CD01800E6A61B /* DiffViewController.m in Sources */,
 				04AA296C206B62DB00694636 /* myKVO.m in Sources */,
-				04AA293D206B62C800694636 /* ViewController.m in Sources */,
+				04176135206C8C8E00E6A61B /* SimpleKVOTestViewController.m in Sources */,
 				04AA2948206B62C800694636 /* main.m in Sources */,
+				04E80CF6206DD5AA00C1E60E /* ControlKVOViewController.m in Sources */,
+				04176130206C88BE00E6A61B /* MainViewController.m in Sources */,
 				04AA293A206B62C800694636 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04AA293E206B62C800694636 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04AA293F206B62C800694636 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04AA2943206B62C800694636 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = KVOTest/PrefixHeader.pch;
 				INFOPLIST_FILE = KVOTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zoe.KVOTest;
@@ -450,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = KVOTest/PrefixHeader.pch;
 				INFOPLIST_FILE = KVOTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zoe.KVOTest;
