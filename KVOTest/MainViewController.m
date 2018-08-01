@@ -37,13 +37,13 @@
 }
 
 - (void)createData{
-    self.titleArr = @[@"KVO简单测试",@"KVO 针对控件测试",@"KVO原理测试",@"KVO,Notification,delegate对比"];
-    self.vcArr = @[@"SimpleKVOTestViewController",@"ControlKVOViewController",@"SimpleKVOTestViewController",@"DiffViewController"];
+    self.titleArr = @[@"KVO简单测试",@"KVO 针对控件测试",@"KVO原理测试",@"自定义手动实现KVO", @"KVO,Notification,delegate对比"];
+    self.vcArr = @[@"SimpleKVOTestViewController",@"ControlKVOViewController",@"SimpleKVOTestViewController",@"ZWWCustomKVOViewController",@"DiffViewController"];
 }
 
 #pragma delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return self.titleArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

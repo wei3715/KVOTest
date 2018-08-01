@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *numLB;
 - (IBAction)changeBtn:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLB;
+- (IBAction)changeName:(id)sender;
+
 @end
 
 @implementation SimpleKVOTestViewController
@@ -25,11 +28,29 @@
     self.myKVO = [[myKVO alloc]init];
     
     //下面这句话前后断点显示self.myKVO的NSObject 的isa为myKVO
+    /**
+     1. self.myKVO：要监听的对象
+     2. 参数说明：
+     * @param addObserver  观察者，负责处理监听事件的对象
+     * @param forKeyPath 要监听的属性
+     * @param  options 观察的选项（观察新、旧值，也可以都观察）
+     * @param context 上下文，用于传递数据，可以利用上下文区分不同的监听
+     */
     [self.myKVO addObserver:self forKeyPath:@"num" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
     //断点后显示self.myKVO的NSObject 的isa为NSKVONotifying_myKVO
     
+     [self.myKVO addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    
 }
 
+/**
+ *  当监控的某个属性的值改变了就会调用
+ *
+ *  @param keyPath 监听的属性名
+ *  @param object  属性所属的对象
+ *  @param change  属性的修改情况（属性原来的值`oldValue`、属性最新的值`newValue`）
+ *  @param context 传递的上下文数据，与监听的时候传递的一致，可以利用上下文区分不同的监听
+ */
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if (([keyPath isEqualToString:@"num"]) && (object == self.myKVO)) {//myKVO
         self.numLB.text = [NSString stringWithFormat:@"num=%@",[change valueForKey:@"new"]];
@@ -47,6 +68,9 @@
 
 - (IBAction)changeBtn:(UIButton *)sender {
     self.myKVO.num = self.myKVO.num + 1;
+    
+}
+- (IBAction)changeName:(id)sender {
     
 }
 @end

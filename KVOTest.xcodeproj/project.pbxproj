@@ -20,6 +20,9 @@
 		04AA296C206B62DB00694636 /* myKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA296B206B62DB00694636 /* myKVO.m */; };
 		04E80CF6206DD5AA00C1E60E /* ControlKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E80CF4206DD5AA00C1E60E /* ControlKVOViewController.m */; };
 		04E80CF7206DD5AA00C1E60E /* ControlKVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E80CF5206DD5AA00C1E60E /* ControlKVOViewController.xib */; };
+		FE5A1A0121120675002B6DE6 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5A19FE21120675002B6DE6 /* NSObject+KVO.m */; };
+		FE5A1A0821120725002B6DE6 /* ZWWCustomKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5A1A0621120725002B6DE6 /* ZWWCustomKVOViewController.m */; };
+		FE5A1A0921120725002B6DE6 /* ZWWCustomKVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5A1A0721120725002B6DE6 /* ZWWCustomKVOViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,11 @@
 		04E80CF3206DD5AA00C1E60E /* ControlKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlKVOViewController.h; sourceTree = "<group>"; };
 		04E80CF4206DD5AA00C1E60E /* ControlKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControlKVOViewController.m; sourceTree = "<group>"; };
 		04E80CF5206DD5AA00C1E60E /* ControlKVOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlKVOViewController.xib; sourceTree = "<group>"; };
+		FE5A19FD21120675002B6DE6 /* NSObject+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		FE5A19FE21120675002B6DE6 /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
+		FE5A1A0521120725002B6DE6 /* ZWWCustomKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCustomKVOViewController.h; sourceTree = "<group>"; };
+		FE5A1A0621120725002B6DE6 /* ZWWCustomKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCustomKVOViewController.m; sourceTree = "<group>"; };
+		FE5A1A0721120725002B6DE6 /* ZWWCustomKVOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWCustomKVOViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 		04AA2937206B62C800694636 /* KVOTest */ = {
 			isa = PBXGroup;
 			children = (
+				FE5A19FB21120675002B6DE6 /* 自定义KVO */,
 				04AA2938206B62C800694636 /* AppDelegate.h */,
 				04AA2939206B62C800694636 /* AppDelegate.m */,
 				04AA2941206B62C800694636 /* Assets.xcassets */,
@@ -155,6 +164,18 @@
 				04AA295E206B62C900694636 /* Info.plist */,
 			);
 			path = KVOTestUITests;
+			sourceTree = "<group>";
+		};
+		FE5A19FB21120675002B6DE6 /* 自定义KVO */ = {
+			isa = PBXGroup;
+			children = (
+				FE5A19FD21120675002B6DE6 /* NSObject+KVO.h */,
+				FE5A19FE21120675002B6DE6 /* NSObject+KVO.m */,
+				FE5A1A0521120725002B6DE6 /* ZWWCustomKVOViewController.h */,
+				FE5A1A0621120725002B6DE6 /* ZWWCustomKVOViewController.m */,
+				FE5A1A0721120725002B6DE6 /* ZWWCustomKVOViewController.xib */,
+			);
+			path = "自定义KVO";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +287,7 @@
 				04AA2945206B62C800694636 /* LaunchScreen.storyboard in Resources */,
 				04E80CF7206DD5AA00C1E60E /* ControlKVOViewController.xib in Resources */,
 				04AA2942206B62C800694636 /* Assets.xcassets in Resources */,
+				FE5A1A0921120725002B6DE6 /* ZWWCustomKVOViewController.xib in Resources */,
 				04176136206C8C8E00E6A61B /* SimpleKVOTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +319,9 @@
 				04AA2948206B62C800694636 /* main.m in Sources */,
 				04E80CF6206DD5AA00C1E60E /* ControlKVOViewController.m in Sources */,
 				04176130206C88BE00E6A61B /* MainViewController.m in Sources */,
+				FE5A1A0821120725002B6DE6 /* ZWWCustomKVOViewController.m in Sources */,
 				04AA293A206B62C800694636 /* AppDelegate.m in Sources */,
+				FE5A1A0121120675002B6DE6 /* NSObject+KVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
