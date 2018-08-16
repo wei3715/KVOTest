@@ -20,6 +20,9 @@
 		04AA296C206B62DB00694636 /* myKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA296B206B62DB00694636 /* myKVO.m */; };
 		04E80CF6206DD5AA00C1E60E /* ControlKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E80CF4206DD5AA00C1E60E /* ControlKVOViewController.m */; };
 		04E80CF7206DD5AA00C1E60E /* ControlKVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E80CF5206DD5AA00C1E60E /* ControlKVOViewController.xib */; };
+		04E80CFE206DE82200C1E60E /* NSObject+MY_KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E80CFD206DE82200C1E60E /* NSObject+MY_KVO.m */; };
+		04E80D01206DE88A00C1E60E /* MY_KVONotifying_myKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E80D00206DE88A00C1E60E /* MY_KVONotifying_myKVO.m */; };
+		04E80D04206DE92D00C1E60E /* KVOPrincipleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E80D03206DE92D00C1E60E /* KVOPrincipleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,12 @@
 		04E80CF3206DD5AA00C1E60E /* ControlKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlKVOViewController.h; sourceTree = "<group>"; };
 		04E80CF4206DD5AA00C1E60E /* ControlKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControlKVOViewController.m; sourceTree = "<group>"; };
 		04E80CF5206DD5AA00C1E60E /* ControlKVOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlKVOViewController.xib; sourceTree = "<group>"; };
+		04E80CFC206DE82200C1E60E /* NSObject+MY_KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MY_KVO.h"; sourceTree = "<group>"; };
+		04E80CFD206DE82200C1E60E /* NSObject+MY_KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MY_KVO.m"; sourceTree = "<group>"; };
+		04E80CFF206DE88A00C1E60E /* MY_KVONotifying_myKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MY_KVONotifying_myKVO.h; sourceTree = "<group>"; };
+		04E80D00206DE88A00C1E60E /* MY_KVONotifying_myKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MY_KVONotifying_myKVO.m; sourceTree = "<group>"; };
+		04E80D02206DE92D00C1E60E /* KVOPrincipleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOPrincipleViewController.h; sourceTree = "<group>"; };
+		04E80D03206DE92D00C1E60E /* KVOPrincipleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOPrincipleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +125,7 @@
 		04AA2937206B62C800694636 /* KVOTest */ = {
 			isa = PBXGroup;
 			children = (
+				04E80CFB206DE82200C1E60E /* KVO原理测试 */,
 				04AA2938206B62C800694636 /* AppDelegate.h */,
 				04AA2939206B62C800694636 /* AppDelegate.m */,
 				04AA2941206B62C800694636 /* Assets.xcassets */,
@@ -155,6 +165,19 @@
 				04AA295E206B62C900694636 /* Info.plist */,
 			);
 			path = KVOTestUITests;
+			sourceTree = "<group>";
+		};
+		04E80CFB206DE82200C1E60E /* KVO原理测试 */ = {
+			isa = PBXGroup;
+			children = (
+				04E80CFC206DE82200C1E60E /* NSObject+MY_KVO.h */,
+				04E80CFD206DE82200C1E60E /* NSObject+MY_KVO.m */,
+				04E80CFF206DE88A00C1E60E /* MY_KVONotifying_myKVO.h */,
+				04E80D00206DE88A00C1E60E /* MY_KVONotifying_myKVO.m */,
+				04E80D02206DE92D00C1E60E /* KVOPrincipleViewController.h */,
+				04E80D03206DE92D00C1E60E /* KVOPrincipleViewController.m */,
+			);
+			path = "KVO原理测试";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,10 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E80D04206DE92D00C1E60E /* KVOPrincipleViewController.m in Sources */,
 				04176139206CD01800E6A61B /* DiffViewController.m in Sources */,
 				04AA296C206B62DB00694636 /* myKVO.m in Sources */,
 				04176135206C8C8E00E6A61B /* SimpleKVOTestViewController.m in Sources */,
+				04E80D01206DE88A00C1E60E /* MY_KVONotifying_myKVO.m in Sources */,
 				04AA2948206B62C800694636 /* main.m in Sources */,
+				04E80CFE206DE82200C1E60E /* NSObject+MY_KVO.m in Sources */,
 				04E80CF6206DD5AA00C1E60E /* ControlKVOViewController.m in Sources */,
 				04176130206C88BE00E6A61B /* MainViewController.m in Sources */,
 				04AA293A206B62C800694636 /* AppDelegate.m in Sources */,

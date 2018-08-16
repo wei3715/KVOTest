@@ -8,6 +8,8 @@
 
 #import "SimpleKVOTestViewController.h"
 #import "myKVO.h"
+#import <objc/runtime.h>
+
 @interface SimpleKVOTestViewController ()
 
 @property (nonatomic, strong) myKVO             *myKVO;
@@ -24,8 +26,17 @@
     
     self.myKVO = [[myKVO alloc]init];
     
+    
     //下面这句话前后断点显示self.myKVO的NSObject 的isa为myKVO
     [self.myKVO addObserver:self forKeyPath:@"num" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    NSLog(@"添加观察者后的类：%s",class_getName(object_getClass(self.myKVO)));
+    
+//    [self.myKVO removeObserver:self forKeyPath:@"num"];
+//     NSLog(@"移除观察者后的类：%s",class_getName(object_getClass(self.myKVO)));
+    
+    //打印log：说明self.myKVO对象的isa指向的类对象的确在改变。
+//    2018-03-30 13:59:43.079644+0800 KVOTest[28074:290398] 添加观察者后的类：NSKVONotifying_myKVO
+//    2018-03-30 13:59:53.143634+0800 KVOTest[28074:290398] 移除观察者后的类：myKVO
     //断点后显示self.myKVO的NSObject 的isa为NSKVONotifying_myKVO
     
 }

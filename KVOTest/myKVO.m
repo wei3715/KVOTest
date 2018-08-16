@@ -22,12 +22,12 @@
     return self;
 }
 
-- (void)setNum:(int)num{
-    _num = num;
-    if ([self.delegate respondsToSelector:@selector(printNum:)]) {
-        [self.delegate printNum:_num];
-    }
-}
+//- (void)setNum:(int)num{
+//    _num = num;
+//    if ([self.delegate respondsToSelector:@selector(printNum:)]) {
+//        [self.delegate printNum:_num];
+//    }
+//}
 
 
 - (void)doNoti{

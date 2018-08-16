@@ -38,7 +38,7 @@
 
 - (void)createData{
     self.titleArr = @[@"KVO简单测试",@"KVO 针对控件测试",@"KVO原理测试",@"KVO,Notification,delegate对比"];
-    self.vcArr = @[@"SimpleKVOTestViewController",@"ControlKVOViewController",@"SimpleKVOTestViewController",@"DiffViewController"];
+    self.vcArr = @[@"SimpleKVOTestViewController",@"ControlKVOViewController",@"KVOPrincipleViewController",@"DiffViewController"];
 }
 
 #pragma delegate
